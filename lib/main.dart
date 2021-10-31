@@ -1,5 +1,10 @@
+import 'package:cook_book/30_days_with_flutter/day_list.dart';
+import 'package:cook_book/get_x_library/get_x_snackbar.dart';
+import 'package:cook_book/get_x_library/get_x_tutorial_list.dart';
 import 'package:cook_book/pages/animate_container.dart';
+import 'package:cook_book/pages/drawer_day_nine.dart';
 import 'package:cook_book/pages/home_page.dart';
+import 'package:cook_book/pages/location_container.dart';
 import 'package:cook_book/utils/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,6 +35,11 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.homePage,
       routes: {
         Routes.AnimatedContainer:(context)=>AnimateContainer(),
+        Routes.LocationContainer:(context)=>LocationContainer(),
+        Routes.Day30Flutter:(context)=>DayList(),
+        Routes.DrawerLayout:(context)=>DrawerDayNine(),
+        Routes.GetXLibrary:(context)=>GetXTutorial(),
+        Routes.GetxSnackbar:(context)=>GetXSnackbarList(),
       },
     );
   }
